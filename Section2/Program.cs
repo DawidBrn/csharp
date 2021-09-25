@@ -59,7 +59,16 @@ namespace Section2
                 Console.WriteLine(item);
             }
 
-                
+            float f = 7.5f;
+            int integer = (int)f;
+            Console.WriteLine("\n"+integer);
+            object o = integer;
+            Console.WriteLine(o);
+            var temp = o;
+            Console.WriteLine(temp);
+            dynamic temp2 = f;
+            Console.WriteLine(temp2);
+            
         }
     }
 }
