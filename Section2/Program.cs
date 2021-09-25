@@ -58,8 +58,8 @@ namespace Section2
             {
                 Console.WriteLine(item);
             }
+        
 
-                
         }
     }
 }
