@@ -53,7 +53,7 @@ namespace Section4
                         break ;
                     default:
                             if (opt.Key == ConsoleKey.Escape) return;
-                            Console.WriteLine("\n You pressed the wrong button");
+                        Console.WriteLine("\n You pressed the wrong button");
                         opt = Console.ReadKey();
                         break;
                 }
