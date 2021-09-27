@@ -67,7 +67,7 @@ namespace Section3
                 if (temp3) { Console.WriteLine("skipped due to unlucky circumstances"); break; }
                 Console.WriteLine($"Line nr {temp2}");
             } while (temp2 < s.Length);
-
+           
 
 
         }
