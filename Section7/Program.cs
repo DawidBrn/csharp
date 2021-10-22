@@ -60,7 +60,10 @@ namespace Section7
             Action<string> process1 = (s) => Console.WriteLine(s);
 
             process();
-            process1("Hello lamda expression here");
+            process1("\n Hello lamda expression here");
+
+            Func<int, int, int> multiply = (x, y) => { return x * y; };
+            Console.WriteLine("\n " + multiply(5, 9));
     }
     }
 
