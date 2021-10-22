@@ -38,6 +38,7 @@ namespace Section7
                 id = value;
             }
         }
+       
 
         public static void Main(String[] args)
         {   // 1.
@@ -60,8 +61,27 @@ namespace Section7
             Action<string> process1 = (s) => Console.WriteLine(s);
 
             process();
-            process1("Hello lamda expression here");
+            process1("\n Hello lamda expression here");
+
+            Func<int, int, int> multiply = (x, y) => { return x * y; };
+            Console.WriteLine("\n " + multiply(5, 9));
+
+
+            
     }
+        //5. method override
+        public void greetings()
+        {
+            Console.WriteLine("Hellow there, how are you?");
+        }
+    }
+    public class Example2 : Example
+    {
+        //5. override
+        public void greetings() 
+        {
+            Console.WriteLine("Hi how are you?");
+        }
     }
 
     // 3.
