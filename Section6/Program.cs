@@ -104,6 +104,7 @@ namespace Section6
             }
             else Console.WriteLine("The game is tied");
             Console.ReadKey();
+            
         }
         
     }
