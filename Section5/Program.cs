@@ -12,15 +12,25 @@ namespace Section5
             Console.WriteLine("Name a file to create : ");
             fileName = Console.ReadLine();
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + $"\\{fileName}example.txt";
+            switch(menu())
+            {
+                case 1:
+                    submenu1();
+                    break;
+                case 2:
+                    break;
+                default:
+                    break;
+            }
+            
             try
             {
-
-
                 string line1 = "", line2 = "";
                 if (File.Exists(path))
                 {
                     File.Delete(path);
                 }
+                
                 using (StreamWriter sw = File.CreateText(path))
                 {
                     sw.WriteLine("hello");
@@ -64,6 +74,27 @@ namespace Section5
                 Console.WriteLine(Ex.ToString());
             }
 
+        }
+        static int menu()
+        {
+            int choice;
+            Console.WriteLine("1. View all the files");
+            Console.WriteLine("2. Create a file ");
+            Console.WriteLine("3.Exit");
+            choice = int.Parse(Console.ReadLine());
+            return choice;
+        }
+        static void submenu1()
+        {
+            string directory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            DirectoryInfo d = new DirectoryInfo(directory);
+            FileInfo[] info = d.GetFiles("*example.txt");
+            string str = "";
+            foreach (FileInfo file in info)
+            {
+                str += file.Name + "," ;
+            }
+            Console.Write(str);
         }
 
 
