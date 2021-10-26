@@ -4,7 +4,25 @@ using System.Collections.Generic;
 
 namespace Section8
 {
+    //Basic of abstract classes
 
+    abstract class Animal
+    {
+        public abstract void Run(int speed);
+        
+    }
+
+    class Dog : Animal
+    {
+        public override void Run(int speed)
+        {
+            Console.WriteLine("Dog runs at speed of : {0}", speed);
+        }
+    }
+
+    //IEnumerator and IEnumerable
+
+    /* 
     class Program : IEnumerator
     {
         List<object> items = new List<object>();
@@ -22,7 +40,7 @@ namespace Section8
         {
             current = 0;
         }
-    }
+    }*/
     /*
     class Wallet : IEnumerable
     {
@@ -72,6 +90,8 @@ namespace Section8
             }
         }
     }*/
+
+    //IComparer and basic interface implementation
 
     /*
     class Employee
