@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace Section7
 {
@@ -74,6 +76,31 @@ namespace Section7
         {
             Console.WriteLine("Hellow there, how are you?");
         }
+
+        //6. async function calling
+        static async Task CookMeat()
+        {
+            Console.WriteLine("I'm cooking the meat");
+        }
+        static async Task CookVeggies()
+        {
+            Console.WriteLine("I'm cooking the veggies");
+        }
+        static async Task MakeBread()
+        {
+            Console.WriteLine("I'm baking the bread");
+        }
+        static async Task MakeSalad()
+        {
+            Console.WriteLine("I'm making a salad");
+        }
+        static async void ServeDinner()
+        {
+            await CookMeat();
+            await CookVeggies();
+            await MakeBread();
+            await MakeSalad();
+        }
     }
     public class Example2 : Example
     {
@@ -82,6 +109,8 @@ namespace Section7
         {
             Console.WriteLine("Hi how are you?");
         }
+        
+
     }
 
     // 3.
