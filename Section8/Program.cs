@@ -4,6 +4,32 @@ using System.Collections.Generic;
 
 namespace Section8
 {
+    // virtual methods
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Example e = new NewExample();
+            e.PrintMessage();
+        }
+
+    }
+    class Example
+    {
+        public virtual void PrintMessage()
+        {
+            Console.WriteLine("Hello world");
+        }
+
+    }
+    class NewExample : Example
+    {
+        public override void PrintMessage()
+        {
+            Console.WriteLine("Not this time");
+            base.PrintMessage();
+        }
+    }
     //Basic of abstract classes
 
     abstract class Animal
