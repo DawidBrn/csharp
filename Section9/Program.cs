@@ -15,24 +15,26 @@ namespace Section9
         static List<int> numbers = new List<int>() { 1, 3, 5, 5, 2, 4 };
         //stacks
         static Stack<string> s = new Stack<string>();
-
+        //enum
+        enum Weekday { Monday =1 , Tuesday , Wednesday , Thursday , Friday, Saturday , Sunday };
         static void Main(string[] args)
         {
+            /*
             //arrays
                 Console.WriteLine("Arrays \n ");
-                string ContentStrings = "";
-                    foreach(var letter in strings)
-                    {
-                        ContentStrings += (letter.ToString() + " " );
-                    }
-                Console.WriteLine(ContentStrings);
-                ContentStrings = "";
-                Array.Sort(strings);
-                    foreach (var letter in strings)
-                    {
-                        ContentStrings += (letter.ToString() + " ");
-                    }
-                Console.WriteLine(ContentStrings);
+            string ContentStrings = "";
+            foreach(var letter in strings)
+            {
+                ContentStrings += (letter.ToString() + " " );
+            }
+            Console.WriteLine(ContentStrings);
+            ContentStrings = "";
+            Array.Sort(strings);
+            foreach (var letter in strings)
+            {
+                ContentStrings += (letter.ToString() + " ");
+            }
+            Console.WriteLine(ContentStrings);
 
             //lists
                 Console.WriteLine("Lists \n");
@@ -74,8 +76,15 @@ namespace Section9
             Console.WriteLine(s.Peek());
             Console.WriteLine("Checking to strings of braces to guarantee proper code execution");
             Console.WriteLine(IsBalanced("{{[]}}").ToString());
-            Console.WriteLine(IsBalanced("(}{}}").ToString());
+            Console.WriteLine(IsBalanced("{(]}").ToString());
+            */
+            //enums
+            Console.WriteLine("\n Enums \n");
 
+            foreach (var day in Enum.GetNames(typeof(Weekday)))
+            {
+                Console.WriteLine(day);
+            }
 
 
         }
