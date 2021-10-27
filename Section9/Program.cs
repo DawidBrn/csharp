@@ -17,6 +17,9 @@ namespace Section9
         static Stack<string> s = new Stack<string>();
         //enum
         enum Weekday { Monday =1 , Tuesday , Wednesday , Thursday , Friday, Saturday , Sunday };
+        //linked lists
+        static LinkedList<string> linkedList = new LinkedList<string>();
+
         static void Main(string[] args)
         {
             /*
@@ -77,7 +80,7 @@ namespace Section9
             Console.WriteLine("Checking to strings of braces to guarantee proper code execution");
             Console.WriteLine(IsBalanced("{{[]}}").ToString());
             Console.WriteLine(IsBalanced("{(]}").ToString());
-            */
+                 
             //enums
             Console.WriteLine("\n Enums \n");
 
@@ -85,7 +88,29 @@ namespace Section9
             {
                 Console.WriteLine(day);
             }
+            
+            //dictionaries
 
+            Dictionary<string, string> dictionary = new Dictionary<string, string>();
+            dictionary.Add("key1", "value1");
+            dictionary.Add("key2", "value2");
+            dictionary.Add("key3", "value3");
+            foreach (var key in dictionary)
+                Console.WriteLine(key);
+
+            string value = " ";
+            dictionary.TryGetValue("key2", out value);
+            */
+            //linkedlist
+
+            linkedList.AddFirst("root");
+            linkedList.AddAfter(linkedList.First, "1st element");
+            linkedList.AddAfter(linkedList.Last, "2nd element");
+            linkedList.AddBefore(linkedList.First, "new root");
+            linkedList.AddLast("last element");
+
+            Console.WriteLine(linkedList.Count);
+            
 
         }
 
