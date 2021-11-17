@@ -32,7 +32,7 @@ namespace Section13
             Parallel.For(0, 50, i => Console.WriteLine(i));
             /*Thread t = new Thread(() => { Console.WriteLine("Hello there"); });
             t.Start();
-
+            
             Thread t1 = new Thread(() => { Print1(); });
              Thread t2 = new Thread(() => { Print2(); });
             Thread t1 = new Thread(Print1);
