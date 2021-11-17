@@ -14,13 +14,13 @@ namespace Section12
         public SuperClass() { }
        
     }
-    class SuperClass2
+    public partial class SuperClass2
     {
-        protected int integer1 = 7;
+        public int integer1 = 7;
         protected virtual void Print()
         {
             Console.WriteLine("SuperClass2 says hello");
-        }
+        } 
     }
     class SubClass : SuperClass2
     {
@@ -30,8 +30,10 @@ namespace Section12
         }
     }
     // class subclass : class superclass
-    class Program : SubClass
+    class Program: SubClass 
     {
+        public Program () { }
+        
         
         static void Main(string[] args)
         {
@@ -41,6 +43,8 @@ namespace Section12
             Program obj = new Program();
             obj.Print();
             Console.WriteLine(obj.integer1);
+            obj.MethodExample1();
+            
         }
 
         static public class Car
