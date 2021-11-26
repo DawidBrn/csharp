@@ -10,10 +10,19 @@
 //  Use when code needs to work 
 // with various familes of similiar objects but want to depend on concrete classes
 // of specific objects , to provide better expandability of code
+
+//builder design pattern, pattern used for creating complex objects data ultimetly can vary from each
+//other for example toyota corrola from 1998 with 1.3L gas engine and 1.6L gas engine. Main advantege 
+//of using builder pattern is reusability of same contructors for diffrent version of the object
+//, although the complexity of code grows with objects differences
+
+
 using System;
 
 namespace Section16
 {
+    //abstact factory segment
+    /* 
     interface IMobile
     {
         IAndroid GetAndroidPhone();
@@ -74,15 +83,31 @@ namespace Section16
             return iOSPhone.GetModelDetails();
         }
     }
+    */
 
+    
     class Program
     {
         static void Main(string[] args)
         {
+            /*
             IMobile mobilePhone = new Phone();
             mobileUser phoneUser = new mobileUser(mobilePhone);
 
-            Console.WriteLine(phoneUser.GetIOSPhoneDetails());
+            Console.WriteLine(phoneUser.GetIOSPhoneDetails());*/
+
+            Car car,car2;
+            CarDirector carDirector = new CarDirector();
+
+            FamilyCar familyCar = new FamilyCar();
+            car = carDirector.CreateCar(familyCar);
+            car.DisplayCar();
+            Console.WriteLine(" ");
+            SportsCar sportsCar = new SportsCar();
+            car2 = carDirector.CreateCar(sportsCar);
+            car2.DisplayCar();
+            
+
         }
     }
 }
