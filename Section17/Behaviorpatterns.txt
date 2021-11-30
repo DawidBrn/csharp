@@ -1,0 +1,34 @@
+﻿ /** behavioral design patterns - help to define how object interact with each other to increase flexibility
+ in the communication. They focus on assigning responsibilities to objects.
+
+ // chain of responsibility delagetes commands to a chain of objects that process those commands
+ Used to create some sort of coupling where a request from client is passed to a chain of objects to 
+ process it. This design pattern lets you pass requests along the chain of handlers. Comes in handy 
+ when your program is expected to process diffrent kinds of requests in various ways but the exact type
+ of requests and their sequences and unknown beforehand. Also to execute certain sequence of hanlders in order
+ or when sequence of handlers might change at runtime.
+
+ //command pattern creates objects that encapsulate actions and parameters
+
+ //interpreter pattern interprets user input and uses an abstract syntax tree
+
+ //iterator lets us acces the elements of an object in sequence without having to expose the underlying 
+ representation of the object
+
+ //mediator provied loose coupling between classes by ensuring that only the mediatior has detailed
+ knowladge of their methods
+
+ //memento pettern can be used to restore object to its previous state
+
+ //observer allows to observer objects to subscribe to events that are sent out by publishers
+
+ //state pattern lets an object alter their own behavior when it's internal state changes
+ 
+ //strategy pattern lets the program to select which algorithm to use from avalible choices at runtime 
+
+ //template method pattern lays out sceleton of an algorithm using an abstract class alowing its subclasses
+ to define its behavior
+
+ //visitor pattern moves a hierarchy of methods into one object separating and algorithm from
+ object structure
+ 
