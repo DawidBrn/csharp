@@ -1,23 +1,7 @@
 ﻿
-// abstract factory design pattern, abstract factory -> concrete factory ->
-// abstract product -> concrete product -> client(map out objects and variances of objects
-// -> decalre abstract object interface for all object types -> create contrete
-// classes to implement previous interfaces -> declare abstract factory interface
-// with a set of creation rules/methods for all abstract objects created by this factory
-//  -> implement set of concrete classes that each represent an object variant phone->android/IOS
-//  , tv -> OLED / amoled itd and write factory inicialization code -> instead of using contructors
-//  call certain creation method for a variant.
-//  Use when code needs to work 
-// with various familes of similiar objects but want to depend on concrete classes
-// of specific objects , to provide better expandability of code
-
-//builder design pattern, pattern used for creating complex objects data ultimetly can vary from each
-//other for example toyota corrola from 1998 with 1.3L gas engine and 1.6L gas engine. Main advantege 
-//of using builder pattern is reusability of same contructors for diffrent version of the object
-//, although the complexity of code grows with objects differences
-
-
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Section16
 {
@@ -90,11 +74,12 @@ namespace Section16
     {
         static void Main(string[] args)
         {
-            /*
+            //Creational design patterns
+            /**
             IMobile mobilePhone = new Phone();
             mobileUser phoneUser = new mobileUser(mobilePhone);
 
-            Console.WriteLine(phoneUser.GetIOSPhoneDetails());*/
+            Console.WriteLine(phoneUser.GetIOSPhoneDetails());
 
             Car car,car2;
             CarDirector carDirector = new CarDirector();
@@ -106,7 +91,40 @@ namespace Section16
             SportsCar sportsCar = new SportsCar();
             car2 = carDirector.CreateCar(sportsCar);
             car2.DisplayCar();
-            
+            **/
+
+            //Structural desing patterns
+            /**
+            Adaptee adaptee = new Adaptee();
+            ITarget target = new Adptr(adaptee);
+            Console.WriteLine(target.Request());
+
+            ISender facebookSender = new FacebookSender();
+            ISender twitterSender = new TwitterSender();
+            ISender nkSender = new NaszaKlasaSender();
+
+            Message msg = new SystemMessage();
+            msg.Subject = "Subject of message";
+            msg.Body = "Hello there";
+
+            msg.Sender = facebookSender;
+            msg.Send();
+
+            msg.Sender = twitterSender;
+            msg.Send();
+
+            msg.Sender = nkSender;
+            msg.Send();
+
+            UserMessage userMessage = new UserMessage();
+            userMessage.Subject = "Test Message";
+            userMessage.Body = "Hellow world";
+            userMessage.UserComments = "Hi";
+
+            userMessage.Sender = facebookSender;
+            userMessage.Send();
+            Console.ReadKey();
+            **/
 
         }
     }

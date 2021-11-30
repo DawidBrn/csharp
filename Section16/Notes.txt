@@ -1,0 +1,56 @@
+﻿
+/** creational design patterns - examples and notes
+It's important to use the pattern that bests fits the need of the situation. 
+Creational design pattern strive to separate a system for creating composing and representing 
+objects.
+
+// abstract factory design pattern, abstract factory -> concrete factory ->
+abstract product -> concrete product -> client(map out objects and variances of objects
+-> decalre abstract object interface for all object types -> create contrete
+classes to implement previous interfaces -> declare abstract factory interface
+with a set of creation rules/methods for all abstract objects created by this factory
+ -> implement set of concrete classes that each represent an object variant phone->android/IOS
+, tv -> OLED / amoled itd and write factory inicialization code -> instead of using 
+contructors call certain creation method for a variant.Use when code needs to work 
+with various familes of similiar objects but want to depend on concrete classes
+of specific objects , to provide better expandability of code
+
+// builder design pattern, pattern used for creating complex objects data ultimetly can vary from
+each other for example toyota corrola from 1998 with 1.3L gas engine and 1.6L gas engine.
+Main advantege of using builder pattern is reusability of same contructors for diffrent version
+of the object, although the complexity of code grows with objects differences
+
+//factory method pattern creates objects without specifying the exact classes to create
+
+//prototype pattern creates a new object from an object that already exists
+
+//singleton pattern ensures that only one instance of an object is created and exists in the app
+at any given time
+
+**/
+
+
+
+/** structural design pattens helps to ensure that even if one part changes the entire structure
+ * of the code doesn't need to change. Here inheritance is a primary component of structural desing 
+ * pattern. They allow us to compose objects in diffrent ways to create new functionality.
+ * 
+ //adapter pattern allows for two classes that are not compatible to work togheter by using an 
+interface with one of the existing classes. Adapter follows the single responibility principal,
+allow to introduce new types of adapters to code without breaking existing client code. 
+
+// bridge decouples two classes so that they can vary independent. Use 
+
+// composite design pattern takes a group of objects and combines them into a single object
+
+//decorator patter lets an object's behavior get extanded at run time
+
+// facade design patter provides a simple interface allowing us to work with a more complex object
+that the interface works with
+
+// flyweight reduces the overhead of creating complex object models
+
+//proxy pattern provides a placeholder interface aimed at controlling access, reducing cost or lessening 
+complexity
+ * 
+ * **/
