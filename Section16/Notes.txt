@@ -1,7 +1,7 @@
 ﻿
 /** creational design patterns - examples and notes
 It's important to use the pattern that bests fits the need of the situation. 
-Creational design pattern strive to separate a system for creating composing and representing 
+Creational design pattern strive to separate a system for creating, composing and representing 
 objects.
 
 // abstract factory design pattern, abstract factory -> concrete factory ->
@@ -41,16 +41,36 @@ allow to introduce new types of adapters to code without breaking existing clien
 
 // bridge decouples two classes so that they can vary independent. Use 
 
-// composite design pattern takes a group of objects and combines them into a single object
+// composite design pattern takes a group of objects and combines them into a single object. Help treating 
+group of object as a tree structure. 
 
-//decorator patter lets an object's behavior get extanded at run time
+//decorator patter lets an object's behavior get extanded at run time, allows to create a wrapper objects
+to assign additional behaviour without touching inside code, however its difficult to remove a specific wrapper 
+from the stack of wrappers
 
 // facade design patter provides a simple interface allowing us to work with a more complex object
-that the interface works with
+that the interface works with. Using facade is not simple with big amounts of subsystem. Always try to avoid 
+creating a god object/monolithic classes - object that is coupled with every subsystem in the program
 
-// flyweight reduces the overhead of creating complex object models
+// flyweight reduces the overhead of creating complex object models. It's used to remove meaningless data
+overlapping saving memory and increasing performance. When the number of objects surpass avalible memory 
+ 
 
 //proxy pattern provides a placeholder interface aimed at controlling access, reducing cost or lessening 
-complexity
+complexity. It controlls acces to the original object allowing to perform something either before or after
+request gets through the original object. ex. protection proxy if you want to limit access to a service for 
+specific users/customers. remote proxy if you want to have remote execution of a remote service. loggin proxy
+for logging user/customer requests or cache proxy to cache history of users request.
  * 
  * **/
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ **/

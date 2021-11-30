@@ -110,7 +110,7 @@ namespace Section16
             msg.Sender = facebookSender;
             msg.Send();
 
-            msg.Sender = twitterSender;
+            msg.Sender = twitterSender; 
             msg.Send();
 
             msg.Sender = nkSender;
@@ -124,8 +124,34 @@ namespace Section16
             userMessage.Sender = facebookSender;
             userMessage.Send();
             Console.ReadKey();
+            
+
+            Folder fldr1 = new Folder("Fldr1");
+            Folder fldr2 = new Folder("Fldr2");
+            File file1 = new File("File 1");
+            File file2 = new File("File 2");
+
+            fldr2.AddChild(file1);
+            fldr2.AddChild(file2);
+            fldr1.AddChild(fldr2);
+            Folder fldr3 = new Folder("Fldr 3");
+            File file3 = new File("File 3");
+
+            fldr3.AddChild(fldr1);
+            fldr3.AddChild(file3);
+            fldr1.Traverse();
+            
+
+            Vehicle car = new Vehicle();
+            Console.WriteLine("Base price is : " + car.Price);
+            DisountedVihecles offer = new DisountedVihecles(car);
+            offer.DiscountPercentage = 25;
+            offer.Offer = "25 % discount";
+            Console.WriteLine(offer.Offer + " on a " + offer.Type + " cars , new price is " + offer.Price);
             **/
 
+            SecurityProxy check = new SecurityProxy();
+            Console.WriteLine(check.getInformation(true));
         }
     }
 }
