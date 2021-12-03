@@ -38,12 +38,23 @@ namespace Section17
 
             subject.Detach(observer2);
             subject.Action();
-            **/
+            
 
             Context StateSwitching = new Context(new InterState1());
             StateSwitching.Request();
             StateSwitching.Request();
             StateSwitching.Request();
+            
+
+            ContextOfStrategy context = new ContextOfStrategy();
+            
+            context.SetStrategy(new ASCLogic());
+            context.BusinessLogic();
+            context.SetStrategy(new DSCLogic());
+            context.BusinessLogic();
+            **/
+
+
 
 
         }

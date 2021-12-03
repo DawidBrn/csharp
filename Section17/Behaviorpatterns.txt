@@ -24,10 +24,11 @@
 
  //state pattern lets an object alter their own behavior when it's internal state changes
  
- //strategy pattern lets the program to select which algorithm to use from avalible choices at runtime 
+ //strategy pattern lets the program to select which algorithm to use from avalible choices at runtime.
+ you can replace inheritance with composition and introduce new strategies without changing context
 
  //template method pattern lays out sceleton of an algorithm using an abstract class alowing its subclasses
- to define its behavior
+ to define its behavior. 
 
  //visitor pattern moves a hierarchy of methods into one object separating and algorithm from
  object structure

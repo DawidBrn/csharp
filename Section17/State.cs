@@ -28,7 +28,7 @@ namespace Section17
         public void Handle(Context context)
         {
             Console.WriteLine("This is initiation of interstate one ");
-            Console.WriteLine("Switches so far : " + context.NumberOfS);
+            Console.WriteLine("Switches so far : " + context.NumberOfS );
             context.NumberOfS++;
             context.State = new InterState2();
         }
